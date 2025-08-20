@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Capture">
+      <UniqueIdentifier>{f7b2d61b-7bc1-406a-b14e-34bd3ea832cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gst">
+      <UniqueIdentifier>{11ec70d1-6f25-46a1-bd7a-a1afc5fd6ab0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CaptureStreaming">
+      <UniqueIdentifier>{a6bd4be5-6c4f-4835-84f9-106a13d15344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pch">
+      <UniqueIdentifier>{39959597-a7f1-4696-85dd-6b5d5e780c39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D3DHelpers">
+      <UniqueIdentifier>{ecf9690e-37a0-47b6-a2a6-855fbcd5760a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DirectXCapture.h">
+      <Filter>Capture</Filter>
+    </ClInclude>
+    <ClInclude Include="GstService.h">
+      <Filter>Gst</Filter>
+    </ClInclude>
+    <ClInclude Include="CaptureStreamingNative.h">
+      <Filter>CaptureStreaming</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Pch</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Pch</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dhelpers.h">
+      <Filter>D3DHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="direct3d11.interop.h">
+      <Filter>D3DHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="capture.interop.h">
+      <Filter>D3DHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="CaptureStreamingDefines.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DirectXCapture.cpp">
+      <Filter>Capture</Filter>
+    </ClCompile>
+    <ClCompile Include="GstService.cpp">
+      <Filter>Gst</Filter>
+    </ClCompile>
+    <ClCompile Include="CaptureStreamingNative.cpp">
+      <Filter>CaptureStreaming</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Pch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="ComputeShaderNV12.hlsl">
+      <Filter>Capture</Filter>
+    </FxCompile>
+    <FxCompile Include="ComputeShaderI420.hlsl">
+      <Filter>Capture</Filter>
+    </FxCompile>
+    <FxCompile Include="ComputeShaderDump.hlsl">
+      <Filter>Capture</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

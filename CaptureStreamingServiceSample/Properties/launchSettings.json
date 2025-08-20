@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CaptureStreamingServiceSample": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

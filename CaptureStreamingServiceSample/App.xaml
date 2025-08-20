@@ -1,0 +1,11 @@
+﻿<mvvm:MvvmApp x:Class="CaptureStreamingServiceSample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CaptureStreamingServiceSample"
+             xmlns:mvvm="clr-namespace:MvpMvvm;assembly=MvpMvvm"
+             xmlns:locators="clr-namespace:MvpMvvm.Locators;assembly=MvpMvvm"              
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <locators:ViewLocator x:Key="ViewLocator" />
+    </Application.Resources>
+</mvvm:MvvmApp>
