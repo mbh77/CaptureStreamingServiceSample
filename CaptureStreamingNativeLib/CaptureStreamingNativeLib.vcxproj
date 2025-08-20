@@ -112,7 +112,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>D:\gst_src\gstreamer\builddir\output\include\gstreamer-1.0;D:\gst_src\gstreamer\builddir\output\include\glib-2.0;D:\gst_src\gstreamer\builddir\output\lib\glib-2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\gstreamer\msvc_x86_64\include\gstreamer-1.0;D:\gstreamer\msvc_x86_64\include\glib-2.0;D:\gstreamer\msvc_x86_64\lib\glib-2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -124,7 +124,7 @@
       <AdditionalDependencies>windowsapp.lib;dwmapi.lib;gobject-2.0.lib;gstreamer-1.0.lib;gstapp-1.0.lib;gstd3d11-1.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <Lib>
-      <AdditionalLibraryDirectories>D:\gst_src\gstreamer\builddir\output\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\gstreamer\msvc_x86_64\lib</AdditionalLibraryDirectories>
     </Lib>
     <FxCompile>
       <ShaderModel>5.0</ShaderModel>
@@ -146,7 +146,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>D:\gst_src\gstreamer\builddir\output\include\gstreamer-1.0;D:\gst_src\gstreamer\builddir\output\include\glib-2.0;D:\gst_src\gstreamer\builddir\output\lib\glib-2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\gstreamer\msvc_x86_64\include\gstreamer-1.0;D:\gstreamer\msvc_x86_64\include\glib-2.0;D:\gstreamer\msvc_x86_64\lib\glib-2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -160,7 +160,7 @@
       <AdditionalDependencies>windowsapp.lib;dwmapi.lib;gobject-2.0.lib;gstreamer-1.0.lib;gstapp-1.0.lib;gstd3d11-1.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <Lib>
-      <AdditionalLibraryDirectories>D:\gst_src\gstreamer\builddir\output\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\gstreamer\msvc_x86_64\lib</AdditionalLibraryDirectories>
     </Lib>
     <FxCompile>
       <ShaderModel>5.0</ShaderModel>
