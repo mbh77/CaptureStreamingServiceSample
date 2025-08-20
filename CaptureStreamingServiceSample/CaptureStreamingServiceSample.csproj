@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy &quot;$(SolutionDir)&quot;HLSL &quot;$(TargetDir)&quot;" />
+    <Exec Command="copy &quot;$(SolutionDir)&quot;HLSL &quot;$(TargetDir)&quot;&#xD;&#xA;xcopy /E /I /Y &quot;$(SolutionDir)gstreamer&quot; &quot;$(TargetDir)gstreamer\&quot;" />
   </Target>
 
 </Project>
