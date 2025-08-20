@@ -364,3 +364,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# 프로젝트 하위 gstreamer 폴더의 DLL 포함
+!**/gstreamer/bin/

@@ -24,6 +24,13 @@ namespace CaptureStreamingServiceSample
             {
                 var gstreamerDir = System.IO.Path.Combine(exeFolder, "gstreamer\\bin");
                 SetDllDirectory(gstreamerDir);
+
+                var gstLibPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(exeFolder, "gstreamer\\lib\\gstreamer-1.0"));
+                Environment.SetEnvironmentVariable("GST_PLUGIN_PATH", gstLibPath, EnvironmentVariableTarget.Process);
+
+                var path = Environment.GetEnvironmentVariable("PATH", EnvironmentVariableTarget.Process);
+                var gstBinPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(exeFolder, "gstreamer\\bin"));
+                Environment.SetEnvironmentVariable("PATH", $"{gstBinPath};{path}", EnvironmentVariableTarget.Process);
             }
         }
 
