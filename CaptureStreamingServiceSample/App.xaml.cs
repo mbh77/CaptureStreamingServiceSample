@@ -4,6 +4,7 @@ using MvpMvvm.Locators;
 using MvpMvvm.Modularity;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows;
 
@@ -22,16 +23,20 @@ namespace CaptureStreamingServiceSample
             var exeFolder = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             if(exeFolder != null)
             {
-                var gstreamerDir = System.IO.Path.Combine(exeFolder, "gstreamer\\bin");
-                SetDllDirectory(gstreamerDir);
-
                 var gstLibPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(exeFolder, "gstreamer\\lib\\gstreamer-1.0"));
-                Environment.SetEnvironmentVariable("GST_PLUGIN_PATH", gstLibPath, EnvironmentVariableTarget.Process);
+                var gstBinPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(exeFolder, "gstreamer\\bin"));
 
                 var path = Environment.GetEnvironmentVariable("PATH", EnvironmentVariableTarget.Process);
-                var gstBinPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(exeFolder, "gstreamer\\bin"));
-                Environment.SetEnvironmentVariable("PATH", $"{gstBinPath};{path}", EnvironmentVariableTarget.Process);
+
+                //Environment.SetEnvironmentVariable("GST_PLUGIN_PATH", gstLibPath, EnvironmentVariableTarget.Process);
+                Environment.SetEnvironmentVariable("PATH", $"{gstLibPath};{gstBinPath};{path}", EnvironmentVariableTarget.Process);
             }
+
+            var local = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            var regDir = System.IO.Path.Combine(local, "CaptureStreamingSample", "gstreamer", "1.0");
+            Directory.CreateDirectory(regDir);
+            var regFile = Path.Combine(regDir, $"registry_{Environment.ProcessId}.bin");
+            Environment.SetEnvironmentVariable("GST_REGISTRY", regFile, EnvironmentVariableTarget.Process);
         }
 
         protected override void ConfigureModuleCatalog(List<IModule> moduleCatalog)
