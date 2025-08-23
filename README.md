@@ -1,6 +1,8 @@
 # CaptureStreamingServiceSample
 Direct3D11FrameCapture를 이용하여 모니터나 원하는 윈도우를 캡쳐하고 캡쳐한 이미지를 Gstreamer를 사용하여 UDP 스트리밍 하는 예제 코드
 
+GStreamerWinRTSample 과 연계하여 UDP 스트리밍 동작을 확인할 수 있습니다.
+
 ### 빌드를 위한 gsteamer 라이브러리 적용하기
 GStreamerWinRTSample은 영상 스트리밍을 위해 gstreamer 라이브러리를 사용합니다.
 gstreamer 라이브러리의 바이너리와 코드는 용량이 커서 git에서 직접 관리하기가 어렵습니다.
